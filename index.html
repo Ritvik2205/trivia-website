@@ -6,24 +6,40 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Preahvihear&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@300&display=swap" rel="stylesheet">
         <title>Trivia!</title>
         <script>
 
             // Loading the whole DOM content
             document.addEventListener('DOMContentLoaded', function() {
                 // checking for correct MCQ answer
-                let correct = document.querySelector('.Correct');
+                let correct = document.querySelector('#question1 > .Correct');
                 correct.addEventListener('click', function() {
                     correct.style.backgroundColor = 'green';
                     document.querySelector('#answer1').innerHTML = 'Correct!';
                 });
+
+                let correct2 = document.querySelector('#question2 > .Correct');
+                correct2.addEventListener('click', function() {
+                    correct2.style.backgroundColor = 'green';
+                    document.querySelector('#answer2').innerHTML = 'Correct!';
+                });
  
                 // checking for incorrect MCQ answer
-                let incorrects = document.querySelectorAll('.Incorrect');
+                let incorrects = document.querySelectorAll("#question1 > .Incorrect");
                 for (let i = 0; i < incorrects.length; i++) {
                     incorrects[i].addEventListener('click', function() {
                         incorrects[i].style.backgroundColor = 'red';
                         document.querySelector('#answer1').innerHTML = 'Incorrect!';
+                    })
+                }
+
+                let incorrects2 = document.querySelectorAll("#question2 > .Incorrect");
+                for (let i = 0; i < incorrects2.length; i++) {
+                    incorrects2[i].addEventListener('click', function() {
+                        incorrects2[i].style.backgroundColor = 'red';
+                        document.querySelector('#answer2').innerHTML = 'Incorrect!';
                     })
                 }
 
@@ -32,10 +48,10 @@
                 let input = document.querySelector('input');
                 if (input.value == 'Sparta') {
                     input.style.backgroundColor = 'green';
-                    document.querySelector('#answer2').innerHTML = 'Correct!';
+                    document.querySelector('#answer3').innerHTML = 'Correct!';
                 } else {
                     input.style.backgroundColor = 'red';
-                    document.querySelector('#answer2').innerHTMl = 'Incorrect!';
+                    document.querySelector('#answer3').innerHTMl = 'Incorrect!';
                 }
                 });
             });
@@ -48,11 +64,13 @@
         </div>
 
         <div class="container">
-            <div class="section">
+            <div class="question-type">
                 <h2>Part 1: Multiple Choice </h2>
                 <hr>
+            </div>
+            <div id="question1" class="section">                
                 <!-- Multiple choice question -->
-                <h3> Who is the king of the gods in Greek mythology? </h3>
+                <div class="question"> Who is the king of the gods in Greek mythology? </div>
 
                 <button class="Correct"> Zeus </button>
                 <button class="Incorrect"> Apollo </button>
@@ -62,16 +80,29 @@
                 <p id="answer1"></p>
             </div>
 
-            <div class="section">
+            <div id="question2" class="section">
+                <div class="question">Which goddess is associated with wisdom, warfare, and strategic planning?</div>
+
+                <button class="Incorrect"> Hera </button>
+                <button class="Incorrect"> Aphrodite </button>
+                <button class="Correct"> Athena </button>
+                <button class="Incorrect"> Demeter </button>
+
+                <p id="answer2"></p>
+            </div>
+            <div class="question-type">
                 <h2>Part 2: Free Response</h2>
                 <hr>
+            </div>
+            <div class="section">
+                
                 <!-- Free response question -->
-                <h3> What city-state is known for its fierce warriors, the Spartans? </h3>
+                <div class="question"> What city-state is known for its fierce warriors, the Spartans? </div>
 
                 <input autocomplete="off" placeholder="City-state" type="text">
                 <button id="submit"> Submit Answer</button>
 
-                <p id="answer2"></p>
+                <p id="answer3"></p>
             </div>
         </div>
     </body>

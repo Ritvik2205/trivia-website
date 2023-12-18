@@ -1,1 +1,1 @@
-# trivia-website
+# Trivia Website
