@@ -2,139 +2,58 @@
 
 <html lang="en">
     <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
         <link href="styles.css" rel="stylesheet">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Preahvihear&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@300&display=swap" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
         <script src="./main.js" type="text/javascript"></script>
         <title>Trivia!</title>
     </head>
     <body>
-        <div class="header">
-            <h1>Greek Trivia!</h1>
+        
+        <div class="header flex-container">
+            <div class="heading">
+                <h1>Trivia!</h1>
+            </div>
+            <div class="container-fluid menu">
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbarDark" aria-controls="offcanvasNavbarDark" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"> <img class="menu-img" src="./list.svg" alt="menu dropdown"> </span>
+                </button>
+                <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasNavbarDark" aria-labelledby="offcanvasNavbarDarkLabel">
+                  <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasNavbarDarkLabel">Trivia!</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                  </div>
+                  <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                      <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="./index.html">Home</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="./greek.html">Greek Trivia</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="./jjk.html">Jujutsu Kaisen Trivia</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            
         </div>
 
-        <div class="container">
-            <div class="question-type">
-                <h2>Part 1: Multiple Choice </h2>
-                <hr>
-            </div>
-            <div id="question1" class="section">                
-                <!-- Multiple choice question -->
-                <div class="question"> Who is the king of the gods in Greek mythology? </div>
-
-                <button class="Correct"> Zeus </button>
-                <button class="Incorrect"> Apollo </button>
-                <button class="Incorrect"> Poseidon </button>
-                <button class="Incorrect"> Hades </button>
-
-                <p id="answer1"></p>
-            </div>
-
-            <div id="question2" class="section">
-                <div class="question">Which goddess is associated with wisdom, warfare, and strategic planning?</div>
-
-                <button class="Incorrect"> Hera </button>
-                <button class="Incorrect"> Aphrodite </button>
-                <button class="Correct"> Athena </button>
-                <button class="Incorrect"> Demeter </button>
-
-                <p id="answer2"></p>
-            </div>
-
-            <div id="question3" class="section">
-                <div class="question">What epic poem attributed to Homer tells the story of the Trojan War?</div>
-
-                <button class="Correct"> The Iliad </button>
-                <button class="Incorrect"> The Odyssey </button>
-                <button class="Incorrect"> The Aeneid </button>
-                <button class="Incorrect"> The Argonautica </button>
-
-                <p id="answer3"></p>
-            </div>
-
-            <div id="question4" class="section">
-                <div class="question">Who is the hero known for his strength and the twelve labors he performed?</div>
-
-                <button class="Incorrect"> Perseus </button>
-                <button class="Incorrect"> Theseus </button>
-                <button class="Incorrect"> Odysseus </button>
-                <button class="Correct"> Heracles (Hercules) </button>
-
-                <p id="answer4"></p>
-            </div>
-
-            <div id="question5" class="section">
-                <div class="question">What creature has the head of a bull and the body of a man, and was confined in the labyrinth?</div>
-
-                <button class="Incorrect"> Chimera </button>
-                <button class="Correct"> Minotaur </button>
-                <button class="Incorrect"> Centaur </button>
-                <button class="Incorrect"> Harpy </button>
-
-                <p id="answer5"></p>
-            </div>
-
-            <div id="question6" class="section">
-                <div class="question">Who is the goddess of love and beauty in Greek mythology?</div>
-
-                <button class="Incorrect"> Artemis </button>
-                <button class="Incorrect"> Hera </button>
-                <button class="Incorrect"> Athena </button>
-                <button class="Correct"> Aphrodite </button>
-
-                <p id="answer6"></p>
-            </div>
-
-            <div id="question7" class="section">
-                <div class="question">Which Greek philosopher is considered the father of Western philosophy?</div>
-
-                <button class="Correct"> Socrates </button>
-                <button class="Incorrect"> Plato </button>
-                <button class="Incorrect"> Aristotle </button>
-                <button class="Incorrect"> Pythagoras </button>
-
-                <p id="answer7"></p>
-            </div>
-
-            <div id="question8" class="section">
-                <div class="question">What was the name of the ship that carried the heroes on the quest for the Golden Fleece?</div>
-
-                <button class="Correct"> Argo </button>
-                <button class="Incorrect"> Pegasus </button>
-                <button class="Incorrect"> Scylla </button>
-                <button class="Incorrect"> Charybdis </button>
-
-                <p id="answer8"></p>
-            </div>
-
-            <div id="question9" class="section">
-                <div class="question">Who is the queen of the underworld and the wife of Hades?</div>
-
-                <button class="Correct"> Persephone </button>
-                <button class="Incorrect"> Demeter </button>
-                <button class="Incorrect"> Hestia </button>
-                <button class="Incorrect"> Hera </button>
-
-                <p id="answer9"></p>
-            </div>
-
-            <div class="question-type">
-                <h2>Part 2: Free Response</h2>
-                <hr>
-            </div>
-            <div class="section">
-                
-                <!-- Free response question -->
-                <div id="question10"> What city-state is known for its fierce warriors, the Spartans? </div>
-
-                <input autocomplete="off" placeholder="City-state" type="text">
-                <button id="submit"> Submit Answer</button>
-
-                <p id="answer10"></p>
+        <div class="intro-card">
+            <p class="intro-heading intro-item">Choose your Trivia!</p>
+            <div class="options-container intro-item">    
+                <button class="options-item"><a href="./greek.html">Greek</a></button>
+                <button class="options-item"><a href="./jjk.html">Jujutsu Kaisen</a></button>
             </div>
         </div>
+        
     </body>
 </html>

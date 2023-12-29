@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap');
+
 body {
     background-color: #C1C7D9;
     color: #212529;
@@ -22,6 +24,14 @@ body {
     padding: 2rem 1rem;
     text-align: center;
     box-shadow: 0 8px 15px #727a8c;
+    display: flex;
+    align-items: center;
+}
+
+
+.heading {
+    flex: 11;
+    padding-left: 10%;
 }
 
 .question-type {
@@ -42,6 +52,10 @@ body {
 h1 {
     font-family: 'Preahvihear', sans-serif;
     font-size: 3.5rem;
+}
+
+.menu {
+    flex: 1;
 }
 
 .question {
@@ -72,11 +86,63 @@ input[type="text"] {
     max-width: 150px;
     width: 20%;
     border: none;
+    margin-top: 10px;
     margin-right: 5px;
     border-radius: 10px;
+    box-shadow: 0 2px 5px #37393f;
+    
 }
 
 input[type="text"]:hover {
     background-color: #e6e3e3;
     transition: color 2s ease-in-out, background-color 0.15s ease-in-out;
+}
+
+.navbar-toggler {
+    font-size: 3.5rem;
+    box-shadow: none;
+}
+
+.menu-img {
+    height: 40px;
+    width: 50px;
+}
+
+.offcanvas-header {
+    background-color: #3D4F73;
+}
+
+.offcanvas-title {
+    font-family: 'Preahvihear', sans-serif;
+    font-size: 2rem;
+    color: #9ea3b3;
+}
+
+.offcanvas-body {
+    background-color: #9ea3b3;
+}
+
+.offcanvas-body a {
+    color: #212529;
+    font-size: 20px;
+    font-family: 'Playpen Sans', sans-serif;
+    font-weight: bolder;
+}
+
+
+.intro-heading {
+    text-align: center;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 3.5rem;
+    padding: 15px;
+}
+
+.intro-card {
+    text-align: center;
+    display: grid;
+}
+
+.intro-card a {
+    text-decoration: none;
+    color: inherit;
 }
