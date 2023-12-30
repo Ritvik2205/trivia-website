@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Doodle+Shadow&display=swap');
 body {
     background-color: #C1C7D9;
     color: #212529;
@@ -138,11 +138,26 @@ input[type="text"]:hover {
 }
 
 .intro-card {
-    text-align: center;
     display: grid;
+    text-align: center;
+    padding-top: 7.5rem;
 }
 
 .intro-card a {
     text-decoration: none;
     color: inherit;
+}
+
+.options-item {
+    height: 100px;
+    width: 400px;
+    font-size: 2rem;
+    font-family: 'Rubik Doodle Shadow', sans-serif;
+    color: black;
+}
+
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 5rem;
+    }
 }
